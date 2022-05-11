@@ -8,40 +8,54 @@
 import UIKit
 
 class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+    let a = 2.5
+    let b = 9.7
+    let c = 6.9
+    let d = 8.2
     
-    let a: Int = 2
-    let b: Int = 9
-    let c: Int = 6
-    let d: Int = 8
-    let a2: Double = 0.5
-    let b2: Double = 0.7
-    let c2: Double = 0.9
-    let d2: Double = 0.2
+    var x: Int
+    var y: Double
+        
+        x = Int (a) + Int (b) + Int (c) + Int (d)
+        y = a + b + c + d - Double (x)
+        
+    
+        print (x)
+        print (y)
+        
+        
+        if x % 2 == 0 {
+                print ("\(x) is even")
+                
+            }
+            else {
+                print ("\(x) is odd")
+            }
+        
+    
+        
+        
+        
+        
+        
+    
+    
+  
+    
+
+    
    
-    
-    var sum = "a"+"b"+"c"+"d"
-    var sum2 = "a2"+"b2"+"c2"+"d2"
-    
-    let sum = 
-    
-    if sum % 2 == 0 {
-        print ("Intger")
-        
-    }
-    else {
-        print ("Fraction")
-    }
-    
-        
     
     
     
     
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
     }
 
 
