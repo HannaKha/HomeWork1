@@ -12,52 +12,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-    let a = 2.5
-    let b = 9.7
-    let c = 6.9
-    let d = 8.2
-    
-    var x: Int
-    var y: Double
+                let a = 2.5
+                let b = 9.7
+                let c = 6.9
+                let d = 8.2
         
-        x = Int (a) + Int (b) + Int (c) + Int (d)
-        y = a + b + c + d - Double (x)
+                var x: Int
+                var y: Double
         
-    
-        print (x)
-        print (y)
+                x = Int (a) + Int (b) + Int (c) + Int (d)
+                y = a + b + c + d - Double (x)
         
         
-        if x % 2 == 0 {
-                print ("\(x) is even")
-                
-            }
-            else {
-                print ("\(x) is odd")
-            }
-        
-    
-    
+                print (x)
+                print (y)
         
         
         
+                if x % 2 == 0 {
+                    print ("\(x) is even")
         
-    
-    
-  
-    
-
-    
-   
-    
-    
-    
-    
-    
-
-    
+                }
+                else {
+                    print ("\(x) is odd")
+        
+                    }
+        
     }
-
-
 }
+
 
