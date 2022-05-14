@@ -8,12 +8,123 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
+        
+        
+        func plus (_ a: Double, _ b: Double) -> Double {
+            return a + b
+        }
+        func minus (_ a: Double, _ b: Double) -> Double {
+            return a - b
+        }
+        func multiplay (_ a: Double, _ b: Double) -> Double {
+            return a * b
+        }
+        func division (_ a: Double, _ b: Double) -> Double {
+            return a / b
+        }
+        
+        print("Универсальные функции сложения, вычитания, умножения и деления:")
+        
+        let plusResolt: (Double, Double) -> Double = plus
+        print("Plus: \(plusResolt (2,3))")
+        
+        let minusResolt: (Double, Double) -> Double = minus
+        print("Minus: \(minusResolt (2,3))")
+        
+        let multiplayResolt: (Double, Double) -> Double = multiplay
+        print("Multiplay: \(multiplayResolt (2,3))")
+        
+        let divisionResolt: (Double, Double) -> Double = division
+        print("Division: \(divisionResolt (2,3))")
+        
+        
+        // 2. Вычислить сумму цифр четырехзначного числа.
+        
+        let number = 1234
+        func sumOfN (n: Int) -> Int {
+            if n == 0 {
+                return 0
+            }
+            
+            return sumOfN (n: n / 10) + n % 10
+        }
+        print("Sum of number: ", number, " is", sumOfN(n: number))
+        
+        
+        // 3. Функция сравнения строк – «авб» больше «ввш».
+        
+        
+        
+        
+        
+        
     }
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //  4. Циклический вызов функций – поломать приложение.
+    //  5. Функция возведения в степень с дефолтным параметром.
+    // 6. Функция вычисления факториала числа.
+    // Дедлайн 14.05.2022 00:00
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
