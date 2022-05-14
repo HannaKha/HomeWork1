@@ -11,8 +11,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
         
+        
+        // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
         
         func plus (_ a: Double, _ b: Double) -> Double {
             return a + b
@@ -73,9 +74,19 @@ class ViewController: UIViewController {
         }
         comparison(str1: "авб", str2: "ввш")
         
+        // Я в процессе
         
         //  4. Циклический вызов функций – поломать приложение.
         
+        
+        
+        func sweetCat (_: String){
+        print("Я сломался")}
+            repeat {
+             
+                // действия
+             
+            }while
         
         
         
@@ -105,7 +116,7 @@ class ViewController: UIViewController {
     
     
     
-    //  4. Циклический вызов функций – поломать приложение.
+    
     //  5. Функция возведения в степень с дефолтным параметром.
     // 6. Функция вычисления факториала числа.
     // Дедлайн 14.05.2022 00:00
