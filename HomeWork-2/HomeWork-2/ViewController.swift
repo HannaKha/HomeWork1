@@ -57,12 +57,38 @@ class ViewController: UIViewController {
         
         // 3. Функция сравнения строк – «авб» больше «ввш».
         
+        print("Функция сравнения строк – «авб» и «ввш»:")
+        
+        func comparison (str1: String, str2: String) {
+            
+            if str1 > str2 {
+                print(str1 + " > " + str2)
+            }
+            else if str2 > str1 {
+                print(str2 + " > " + str1)
+            }
+            else {
+                print(str1 + " = " + str2)
+            }
+        }
+        comparison(str1: "авб", str2: "ввш")
+        
+        
+        //  4. Циклический вызов функций – поломать приложение.
         
         
         
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -87,18 +113,18 @@ class ViewController: UIViewController {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
