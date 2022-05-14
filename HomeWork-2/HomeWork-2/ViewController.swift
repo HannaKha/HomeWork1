@@ -88,7 +88,6 @@ class ViewController: UIViewController {
             
         }
         
-       
         
         // 5. Функция возведения в степень с дефолтным параметром.
         
@@ -100,8 +99,8 @@ class ViewController: UIViewController {
         
         
         
-        // Я в процессе
         // 6. Функция вычисления факториала числа.
+        
         
         
         
