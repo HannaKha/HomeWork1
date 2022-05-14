@@ -101,7 +101,18 @@ class ViewController: UIViewController {
         
         // 6. Функция вычисления факториала числа.
         
+        func factorial(_ n: Int) -> Int{
+            
+            if n == 0{
+                
+                return 1
+            }
+            
+            return n * factorial(n-1)
+        }
         
+        
+        print("Факториал числа: \(factorial (5))")
         
         
         
@@ -110,46 +121,46 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 
 
