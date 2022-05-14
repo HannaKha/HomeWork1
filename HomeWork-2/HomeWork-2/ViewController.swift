@@ -88,13 +88,20 @@ class ViewController: UIViewController {
             
         }
         
-        // Я в процессе
+       
         
         // 5. Функция возведения в степень с дефолтным параметром.
         
+        func exponent (num: Double, power: Double) -> Double{
+            return pow(num, power)
+        }
+        let ResoltExponent: (Double, Double) -> Double = exponent
+        print("Возведение степень: \(ResoltExponent (2,3))")
         
         
         
+        // Я в процессе
+        // 6. Функция вычисления факториала числа.
         
         
         
@@ -128,9 +135,7 @@ class ViewController: UIViewController {
     
     
     
-    // 6. Функция вычисления факториала числа.
-    // Дедлайн 14.05.2022 00:00
-    
+   
     
     
     
