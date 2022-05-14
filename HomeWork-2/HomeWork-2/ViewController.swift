@@ -74,21 +74,21 @@ class ViewController: UIViewController {
         }
         comparison(str1: "авб", str2: "ввш")
         
-        // Я в процессе
         
         //  4. Циклический вызов функций – поломать приложение.
         
-        
-        
-        func sweetCat (_: String){
-        print("Я сломался")}
+        func cat (a: String) {
+            print(a)
+            
             repeat {
-             
-                // действия
-             
-            }while
+                
+                cat (a: "cat")
+                
+            } while 4 > 1
+            
+        }
         
-        
+        // Я в процессе
         
         
     }
