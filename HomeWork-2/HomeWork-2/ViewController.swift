@@ -9,70 +9,67 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
+    
+    func plus (_ a: Double, _ b: Double) -> Double {
+        return a + b
+    }
+    func minus (_ a: Double, _ b: Double) -> Double {
+        return a - b
+    }
+    func multiplay (_ a: Double, _ b: Double) -> Double {
+        return a * b
+    }
+    func division (_ a: Double, _ b: Double) -> Double {
+        return a / b
+    }
+    // 2. Вычислить сумму цифр четырехзначного числа.
+    
+    let number = 1234
+    func sumOfN (n: Int) -> Int {
         
-        
-        // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
-        
-        func plus (_ a: Double, _ b: Double) -> Double {
-            return a + b
+        if n == 0 {
+            return 0
         }
-        func minus (_ a: Double, _ b: Double) -> Double {
-            return a - b
+        
+        return sumOfN (n: n / 10) + n % 10
+    }
+    //    func sumOfN(number: Int) -> Int {
+    //                var a = 0
+    //                let b = String(number)
+    //                for n in b {
+    //                    a += Int(String(n)) ?? 0
+    //                }
+    //                print("Сумма цифр числа \(number) равняется: \(a)")
+    
+    
+    // 3. Функция сравнения строк – «авб» больше «ввш».
+    
+    let str1 = "авб"
+    let str2 = "ввш"
+    
+    func comparison (str1: String, str2: String) -> String {
+        
+        if str1 > str2 {
+            return str1 + ">" +  str2
         }
-        func multiplay (_ a: Double, _ b: Double) -> Double {
-            return a * b
+        else if str2 > str1 {
+            return str2 + ">" +  str1
         }
-        func division (_ a: Double, _ b: Double) -> Double {
-            return a / b
+        else {
+            return str1 + "+" +  str2
         }
+    }
         
-        print("Универсальные функции сложения, вычитания, умножения и деления:")
-        
-        let plusResolt: (Double, Double) -> Double = plus
-        print("Plus: \(plusResolt (2,3))")
-        
-        let minusResolt: (Double, Double) -> Double = minus
-        print("Minus: \(minusResolt (2,3))")
-        
-        let multiplayResolt: (Double, Double) -> Double = multiplay
-        print("Multiplay: \(multiplayResolt (2,3))")
-        
-        let divisionResolt: (Double, Double) -> Double = division
-        print("Division: \(divisionResolt (2,3))")
-        
-        
-        // 2. Вычислить сумму цифр четырехзначного числа.
-        
-        let number = 1234
-        func sumOfN (n: Int) -> Int {
-            if n == 0 {
-                return 0
-            }
-            
-            return sumOfN (n: n / 10) + n % 10
-        }
-        print("Sum of number: ", number, " is", sumOfN(n: number))
-        
-        
-        // 3. Функция сравнения строк – «авб» больше «ввш».
-        
-        print("Функция сравнения строк – «авб» и «ввш»:")
-        
-        func comparison (str1: String, str2: String) {
-            
-            if str1 > str2 {
-                print(str1 + " > " + str2)
-            }
-            else if str2 > str1 {
-                print(str2 + " > " + str1)
-            }
-            else {
-                print(str1 + " = " + str2)
-            }
-        }
-        comparison(str1: "авб", str2: "ввш")
+        //        if str1 > str2 {
+        //            print(str1 + " > " + str2)
+        //        }
+        //        else if str2 > str1 {
+        //            print(str2 + " > " + str1)
+        //        }
+        //        else {
+        //            print(str1 + " = " + str2)
+        //        }
         
         
         //  4. Циклический вызов функций – поломать приложение.
@@ -88,16 +85,11 @@ class ViewController: UIViewController {
             
         }
         
-        
         // 5. Функция возведения в степень с дефолтным параметром.
         
         func exponent (num: Double, power: Double) -> Double{
             return pow(num, power)
         }
-        let ResoltExponent: (Double, Double) -> Double = exponent
-        print("Возведение степень: \(ResoltExponent (2,3))")
-        
-        
         
         // 6. Функция вычисления факториала числа.
         
@@ -111,82 +103,115 @@ class ViewController: UIViewController {
             return n * factorial(n-1)
         }
         
-        
-        print("Факториал числа: \(factorial (5))")
-        
-        
-        
-        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            
+            
+            // 1. Универсальные функции сложения, вычитания, умножения и деления (перегрузка функций).
+            
+            print("Универсальные функции сложения, вычитания, умножения и деления:")
+            
+            let plusResolt: (Double, Double) -> Double = plus
+            print("Plus: \(plusResolt (2,3))")
+            
+            let minusResolt: (Double, Double) -> Double = minus
+            print("Minus: \(minusResolt (2,3))")
+            
+            let multiplayResolt: (Double, Double) -> Double = multiplay
+            print("Multiplay: \(multiplayResolt (2,3))")
+            
+            let divisionResolt: (Double, Double) -> Double = division
+            print("Division: \(divisionResolt (2,3))")
+            
+            
+            // 2. Вычислить сумму цифр четырехзначного числа.
+            
+            //        sumOfN(number: 1234)
+            
+            print("Sum of number: ", number, " is", sumOfN(n: number))
+            
+            
+            
+            // 3. Функция сравнения строк – «авб» больше «ввш».
+            
+//            print("Функция сравнения строк – «авб» и «ввш»:", str1)
+//
+//            comparison(str1: "авб", str2: "ввш")
+            
+            print(comparison(str1: "авб", str2: "ввш"))
+            
+            
+            // 5. Функция возведения в степень с дефолтным параметром.
+            
+            let ResoltExponent: (Double, Double) -> Double = exponent
+            print("Возведение степень: \(ResoltExponent (2,3))")
+            
+            
+            // 6. Функция вычисления факториала числа.
+            
+            print("Факториал числа: \(factorial (5))")
+            
+        }
         
     }
     
-    
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
